@@ -11,7 +11,7 @@ export default function Projects() {
           description="A data archiving website for an online game similar to ESPN.com"
         />
         <ProjectComponent
-          title="Ecommerce Platforms"
+          title="Ecommerce Platform"
           tags="React | TypeScript | API | Supabase"
           description="An eccomerce website connected to Stripe to handle payments and show users their orders"
         />
