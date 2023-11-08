@@ -12,12 +12,15 @@ body {
 }
 
 .nav {
+  top: 0;
+  right: 0;
+  position: fixed;
   display: flex;
   flex-direction: row;
   justify-content: right;
   background-color: red;
   align-items: center;
-  padding-right: 10%;
+  margin-right: 10%;
 }
 
 .menu {
@@ -40,8 +43,8 @@ body {
 
 .intro-text {
   min-height: 20vh;
-  border: 1px solid black;
   width: 50%;
+  font-size: 21px;
 }
 
 .intro-photo {
@@ -49,7 +52,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 20vh;
-  border: 1px solid black;
+  height: 200px;
 }
 
 .toolkit {
@@ -67,15 +70,14 @@ body {
 }
 
 .skill-container {
+  padding-top: 15px;
+  display: flex;
+  flex-direction: column;
   height: 100px;
-  border: 1px solid black;
   flex: 0 1 100px;
 }
 
 .skill-image {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .skill-name {
@@ -114,4 +116,11 @@ body {
   text-align: center;
   font-size: 18px;
   padding: 10px;
+}
+
+.svg {
+  height: 50px;
+  path {
+    fill: black;
+  }
 }
