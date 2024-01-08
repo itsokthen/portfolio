@@ -33,7 +33,7 @@ export default function Toolkit() {
           <Skills text="Accessibility" img={accessibilitySVG} />
           <Skills text="Responsive" img={responsiveSVG} />
           <Skills text="AWS" img={awsSVG} />
-          <Skills text=".NET" img={dotnetSVG} />
+          {/* <Skills text=".NET" img={dotnetSVG} /> */}
         </div>
       </div>
     </>

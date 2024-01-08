@@ -1,5 +1,7 @@
 import ProjectComponent from "./ProjectComponent";
 
+import tagprocentral from "/tagprocentral_page.png";
+
 export default function Projects() {
   return (
     <>
@@ -9,6 +11,7 @@ export default function Projects() {
           title="TagproCentral.com"
           tags="React | API | .NET"
           description="A data archiving website for an online game similar to ESPN.com"
+          img={tagprocentral}
         />
         <ProjectComponent
           title="Ecommerce Platform"

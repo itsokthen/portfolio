@@ -1,14 +1,15 @@
-import avatar from "/avatar.png";
+import avatar from "/avatar.jpg";
 
 export default function Intro() {
   return (
     <>
       <div className="intro-container wrapper">
         <div className="intro-text">
+          <h1 className="headerText">Hi! I'm Cade 🙋‍♂️</h1>
           <p>
-            Hi! I'm Cade 🙋‍♂️ I am a software engineer with a passion for concrete
-            code with unique solutions. I am currently incredibly excited to
-            start my programming career.
+            I am a software engineer with a passion for concrete code with
+            unique solutions. I am currently incredibly excited to start my
+            programming career.
           </p>
           <p>
             Outside of work, I go to the gym daily unless I am rock climbing

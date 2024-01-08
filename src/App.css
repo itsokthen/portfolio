@@ -18,7 +18,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: right;
-  background-color: red;
+  background-color: #b8e7f5;
   align-items: center;
   margin-right: 10%;
 }
@@ -31,6 +31,7 @@ body {
   gap: 20px;
 }
 .intro-container {
+  height: 100vh;
   display: flex;
   flex: 1 1 0;
   flex-direction: row;
@@ -123,4 +124,21 @@ body {
   path {
     fill: black;
   }
+}
+.headerText {
+  color: #45a4bf;
+  position: relative;
+  width: 50%;
+}
+.headerText::after {
+  content: "";
+  position: absolute;
+  background-color: #b8e7f5;
+  -webkit-box-shadow: 0 0 8px #b8e7f5;
+  box-shadow: 0 0 8px #b8e7f5;
+  height: 25px;
+  left: 8px;
+  bottom: 0;
+  width: 100%;
+  z-index: -1;
 }
