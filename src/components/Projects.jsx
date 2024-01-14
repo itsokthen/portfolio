@@ -17,6 +17,7 @@ export default function Projects() {
           title="Ecommerce Platform"
           tags="React | TypeScript | API | Supabase"
           description="An eccomerce website connected to Stripe to handle payments and show users their orders"
+          img={tagprocentral}
         />
       </div>
     </>
