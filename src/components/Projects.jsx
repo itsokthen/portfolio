@@ -19,6 +19,12 @@ export default function Projects() {
           description="An eccomerce website connected to Stripe to handle payments and show users their orders"
           img={tagprocentral}
         />
+        <ProjectComponent
+          title="GitHub Support Bot"
+          tags="Python | Git | Project Manager"
+          description="A GitHub bot that provides a handful of useful tools to teams"
+          img={tagprocentral}
+          />
       </div>
     </>
   );
