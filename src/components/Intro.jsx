@@ -1,5 +1,6 @@
 import avatar from "/avatar.jpg";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 export default function Intro() {
   return (
     <>
@@ -19,6 +20,9 @@ export default function Intro() {
         </div>
 
         <img src={avatar} alt="avatar" className="intro-photo" />
+      </div>
+      <div className="down-arrow">
+        <FontAwesomeIcon icon={faAngleDown} />
       </div>
     </>
   );

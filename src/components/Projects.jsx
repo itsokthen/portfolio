@@ -24,7 +24,7 @@ export default function Projects() {
           tags="Python | Git | Project Manager"
           description="A GitHub bot that provides a handful of useful tools to teams"
           img={tagprocentral}
-          />
+        />
       </div>
     </>
   );

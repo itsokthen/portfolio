@@ -7,8 +7,8 @@ export default function ProjectComponent(props) {
         <p>{props.description}</p>
         <img src={props.img} alt="project" className="skill-image" />
         <p>
-          <button>Live</button>
-          <button>Github</button>
+          <button className="button">Live</button>
+          <button className="button">Github</button>
         </p>
       </div>
     </>
