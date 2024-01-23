@@ -14,21 +14,37 @@ export default function Intro() {
     },
   };
 
+  const container = {
+    hidden: { x: 100, opacity: 0 },
+    show: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut",
+        staggerChildren: 1,
+        when: "beforeChildren",
+      },
+    },
+  };
+
   return (
     <>
       <div className="intro-container wrapper">
         <div className="intro-text">
           <h1 className="headerText">Hi! I'm Cade 🙋‍♂️</h1>
-          <p>
-            I am a software engineer with a passion for concrete code with
-            unique solutions. I am currently incredibly excited to start my
-            programming career.
-          </p>
-          <p>
-            Outside of work, I go to the gym daily unless I am rock climbing
-            with my friends. I love video games and sports and I recently picked
-            up playing golf with my dad ⛳
-          </p>
+          <motion.div variants={container} initial="hidden" animate="show">
+            <motion.p variants={container}>
+              I am a software engineer with a passion for concrete code with
+              unique solutions. I am currently incredibly excited to start my
+              programming career.
+            </motion.p>
+            <motion.p variants={container}>
+              Outside of work, I go to the gym daily unless I am rock climbing
+              with my friends. I love video games and sports and I recently
+              picked up playing golf with my dad ⛳
+            </motion.p>
+          </motion.div>
         </div>
 
         <img src={avatar} alt="avatar" className="intro-photo" />

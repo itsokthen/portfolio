@@ -31,7 +31,7 @@ body {
   align-items: center;
   right: -200px;
   opacity: 0;
-  animation: nav 1s ease-out forwards;
+  animation: opacity 1.5s ease-out forwards;
 }
 
 .navBackground {
@@ -62,9 +62,9 @@ body {
   min-height: 85vh;
   width: 75%;
   gap: 3rem;
-  transform: translateY(100px);
-  opacity: 0;
-  animation: intro-container 2s 1 forwards;
+  /* transform: translateY(100px); */
+  /* opacity: 0; */
+  /* animation: intro-container 2s 1 forwards; */
 }
 
 @media only screen and (max-width: 768px) {
@@ -89,10 +89,10 @@ body {
   justify-content: center;
   min-height: 20vh;
   height: 200px;
+  opacity: 0;
+  animation: opacity 1.5s ease-out forwards;
 }
 
-.toolkit {
-}
 .toolkit-title {
   text-align: center;
 }
@@ -111,9 +111,6 @@ body {
   flex-direction: column;
   height: 100px;
   flex: 0 1 100px;
-}
-
-.skill-image {
 }
 
 .skill-name {
@@ -157,14 +154,13 @@ body {
 
 .svg {
   height: 50px;
-  path {
-    fill: black;
-  }
 }
 .headerText {
   color: #45a4bf;
   position: relative;
   width: 50%;
+  opacity: 0;
+  animation: opacity 1.5s ease-out forwards;
 }
 .headerText::after {
   content: "";
@@ -191,12 +187,13 @@ body {
   margin: 0 10px;
 }
 
-@keyframes nav {
+@keyframes opacity {
   to {
     opacity: 1;
   }
 }
-@keyframes intro-container {
+
+/* @keyframes intro-container {
   from {
     transform: translateY(100px);
     opacity: 0;
@@ -205,7 +202,7 @@ body {
     transform: translateY(0);
     opacity: 1;
   }
-}
+} */
 
 .down-arrow {
   display: flex;
@@ -216,4 +213,10 @@ body {
   color: var(--secondary-color);
   font-weight: 700;
   font-size: 2.8rem;
+}
+
+.projectTitle {
+  color: var(--main-color);
+  font-weight: 700;
+  font-size: 1.8rem;
 }

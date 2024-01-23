@@ -6,7 +6,7 @@ export default function Projects() {
   return (
     <>
       <div className="projects wrapper">
-        <h2>Some of My Projects</h2>
+        <h2 className="title">Some of My Projects</h2>
         <ProjectComponent
           title="TagproCentral.com"
           tags="React | API | .NET"
