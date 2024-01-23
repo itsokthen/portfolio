@@ -1,7 +1,19 @@
 import avatar from "/avatar.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
+import { motion } from "framer-motion";
 export default function Intro() {
+  const arrowAnim = {
+    y: [0, -10, 0],
+    transition: {
+      y: {
+        duration: 1,
+        repeat: Infinity,
+        ease: "easeOut",
+      },
+    },
+  };
+
   return (
     <>
       <div className="intro-container wrapper">
@@ -22,7 +34,9 @@ export default function Intro() {
         <img src={avatar} alt="avatar" className="intro-photo" />
       </div>
       <div className="down-arrow">
-        <FontAwesomeIcon icon={faAngleDown} />
+        <motion.div animate={arrowAnim}>
+          <FontAwesomeIcon icon={faAngleDown} />
+        </motion.div>
       </div>
     </>
   );

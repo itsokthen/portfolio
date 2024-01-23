@@ -1,4 +1,6 @@
 import Skills from "./Skills.jsx";
+import { Reveal } from "./Reveal.tsx";
+import { motion, useInView, useAnimation } from "framer-motion";
 
 // SVG imports
 import ReactSVG from "/react-2.svg";
@@ -19,21 +21,48 @@ export default function Toolkit() {
   return (
     <>
       <div className="toolkit wrapper">
-        <h2 className="">My Toolkit 🎯</h2>
+        <h2 className="title">My Toolkit 🎯</h2>
         <div className="skills">
-          <Skills text="HTML5" img={HtmlSVG} />
-          <Skills text="CSS" img={CssSVG} />
-          <Skills text="Javascript" img={JavascriptSVG} />
-          <Skills text="React" img={ReactSVG} />
-          <Skills text="Github" img={githubSVG} />
-          <Skills text="Typescript" img={typescriptSVG} />
-          <Skills text="Node" img={nodeSVG} />
-          <Skills text="RestAPI" img={RestAPISVG} />
-          <Skills text="Supabase" img={supabaseSVG} />
-          <Skills text="Accessibility" img={accessibilitySVG} />
-          <Skills text="Responsive" img={responsiveSVG} />
-          <Skills text="AWS" img={awsSVG} />
-          <Skills text="NextJS" />
+          <Reveal>
+            <Skills text="HTML5" img={HtmlSVG} />
+          </Reveal>
+          <Reveal>
+            <Skills text="CSS" img={CssSVG} />
+          </Reveal>
+          <Reveal>
+            <Skills text="Javascript" img={JavascriptSVG} />
+          </Reveal>
+          <Reveal>
+            <Skills text="React" img={ReactSVG} />
+          </Reveal>
+          <Reveal>
+            <Skills text="Github" img={githubSVG} />
+          </Reveal>
+          <Reveal>
+            <Skills text="Typescript" img={typescriptSVG} />
+          </Reveal>
+          <Reveal>
+            <Skills text="Node" img={nodeSVG} />
+          </Reveal>
+          <Reveal>
+            <Skills text="RestAPI" img={RestAPISVG} />
+          </Reveal>
+          <Reveal>
+            <Skills text="Supabase" img={supabaseSVG} />
+          </Reveal>
+          <Reveal>
+            <Skills text="Accessibility" img={accessibilitySVG} />
+          </Reveal>
+          <Reveal>
+            <Skills text="Responsive" img={responsiveSVG} />
+          </Reveal>
+          <Reveal>
+            <Skills text="AWS" img={awsSVG} />
+          </Reveal>
+          <Reveal>
+            <Skills text="NextJS" />
+          </Reveal>
+
           {/* <Skills text=".NET" img={dotnetSVG} /> */}
         </div>
       </div>
