@@ -20,7 +20,7 @@ import dotnetSVG from "/dotnet.svg";
 export default function Toolkit() {
   return (
     <>
-      <div className="toolkit wrapper">
+      <div className="toolkit wrapper" id="Toolkit">
         <h2 className="title">My Toolkit 🎯</h2>
         <div className="skills">
           <Reveal>

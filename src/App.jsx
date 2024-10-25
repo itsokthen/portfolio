@@ -5,6 +5,7 @@ import Intro from "./components/Intro.jsx";
 import Toolkit from "./components/Toolkit.jsx";
 import Projects from "./components/Projects";
 import ContactMe from "./components/ContactMe";
+// import { BrowserRouter } from "react-router-dom";
 
 function App() {
   return (

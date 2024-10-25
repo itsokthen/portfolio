@@ -1,7 +1,7 @@
 export default function ContactMe() {
   return (
     <>
-      <div className="footer wrapper">
+      <div className="footer wrapper" id="Contact">
         <h2>Find Me Here</h2>
         <ul className="contactLinks">
           <li>
