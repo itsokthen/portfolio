@@ -8,6 +8,14 @@ export default function ProjectComponent(props) {
       <h3 className={styles.projectTitle}>{props.title}</h3>
       <p className={styles.projectTags}>{props.tags}</p>
       <p>{props.description}</p>
+      <p>
+        <strong>Contribution: </strong>
+        {props.contribution}
+      </p>
+      <p>
+        <strong>What I learned: </strong>
+        {props.learned}
+      </p>
       <div className={styles.projectLinks}>
         {props.liveurl && (
           <a href={props.liveurl} target="_blank" rel="noopener noreferrer">
@@ -28,6 +36,8 @@ ProjectComponent.propTypes = {
   title: PropTypes.string.isRequired,
   tags: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
+  contribution: PropTypes.string.isRequired,
+  learned: PropTypes.string.isRequired,
   img: PropTypes.string.isRequired,
   liveurl: PropTypes.string,
   github: PropTypes.string,
