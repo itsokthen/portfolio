@@ -1,20 +1,26 @@
-//import { useState } from 'react'
 import "./App.css";
 import Nav from "./components/Nav.jsx";
 import Intro from "./components/Intro.jsx";
 import Toolkit from "./components/Toolkit.jsx";
 import Projects from "./components/Projects";
 import ContactMe from "./components/ContactMe";
-// import { BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
     <>
       <Nav />
-      <Intro />
-      <Toolkit />
-      <Projects />
-      <ContactMe />
+      <div id="Intro">
+        <Intro />
+      </div>
+      <div id="Toolkit">
+        <Toolkit />
+      </div>
+      <div id="Projects">
+        <Projects />
+      </div>
+      <div id="Contact">
+        <ContactMe />
+      </div>
     </>
   );
 }
