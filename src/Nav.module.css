@@ -14,6 +14,7 @@
   right: -200px;
   opacity: 0;
   animation: opacity 1.5s ease-out forwards;
+  color: black;
 }
 
 @keyframes opacity {

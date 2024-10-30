@@ -1,6 +1,20 @@
 :root {
   --main-color: #45a4bf;
   --secondary-color: #fcba04;
+  --main-alt: #b8e7f5;
+  --bg-color-light: #ffffff;
+  --text-color-light: #000000;
+  --bg-color-dark: #3e3e3e;
+  --text-color-dark: #ffffff;
+}
+.light-mode {
+  background-color: var(--bg-color-light);
+  color: var(--text-color-light);
+}
+
+.dark-mode {
+  background-color: var(--bg-color-dark);
+  color: var(--text-color-dark);
 }
 
 html,
@@ -49,46 +63,6 @@ a {
   }
 }
 
-.intro-container {
-  height: 80vh;
-  display: flex;
-  flex: 1 1 0;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  min-height: 80vh;
-  gap: 3rem;
-  /* transform: translateY(100px); */
-  /* opacity: 0; */
-  /* animation: intro-container 2s 1 forwards; */
-}
-
-@media only screen and (max-width: 768px) {
-  .intro-container {
-    display: flex;
-    flex-direction: column;
-  }
-  .intro-container .intro-text {
-    width: auto;
-  }
-}
-
-.intro-text {
-  min-height: 20vh;
-  width: 50%;
-  font-size: 21px;
-}
-
-.intro-photo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 20vh;
-  height: 200px;
-  opacity: 0;
-  animation: opacity 1.5s ease-out forwards;
-}
-
 .toolkit-title {
   text-align: center;
 }
@@ -98,7 +72,7 @@ a {
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
-  max-width: calc(100px * 8 + 7rem);
+  max-width: calc(120px * 8 + 7rem);
   margin: 0 auto;
 }
 
@@ -108,7 +82,7 @@ a {
   flex-direction: column;
   height: 100px;
   flex: 0 1 100px;
-  width: 100px;
+  width: 120px;
 }
 
 .skill-name {
@@ -152,25 +126,6 @@ a {
 .svg:hover {
   height: 60px;
 }
-.headerText {
-  color: #45a4bf;
-  position: relative;
-  width: 50%;
-  opacity: 0;
-  animation: opacity 1.5s ease-out forwards;
-}
-.headerText::after {
-  content: "";
-  position: absolute;
-  background-color: #b8e7f5;
-  -webkit-box-shadow: 0 0 8px #b8e7f5;
-  box-shadow: 0 0 8px #b8e7f5;
-  height: 25px;
-  left: 8px;
-  bottom: 0;
-  width: 100%;
-  z-index: -1;
-}
 
 .button {
   padding: 15px;
@@ -201,11 +156,6 @@ a {
     opacity: 1;
   }
 } */
-
-.down-arrow {
-  display: flex;
-  justify-content: center;
-}
 
 .title {
   color: var(--secondary-color);

@@ -1,12 +1,13 @@
 import ProjectComponent from "./ProjectComponent";
 
 import tagprocentral from "/tagprocentral_page.png";
+import PropTypes from "prop-types";
 
-export default function Projects() {
+export default function Projects({ isDarkMode }) {
   return (
     <>
       <div className="wrapper" id="Projects">
-        <h2 className="title">Things I have Worked On</h2>
+        <h2 className="title">My Work</h2>
         <div className="projectCards">
           <ProjectComponent
             title="BEloved.com"
@@ -17,6 +18,7 @@ export default function Projects() {
             img={tagprocentral}
             liveurl="http://tagprocentral.com"
             github="https://github.com/itsokthen/tagpro_central"
+            isDarkMode={isDarkMode}
           />
           <ProjectComponent
             title="tpm.gg"
@@ -27,6 +29,7 @@ export default function Projects() {
             img={tagprocentral}
             liveurl="http://tagprocentral.com"
             github="https://github.com/itsokthen/tagpro_central"
+            isDarkMode={isDarkMode}
           />
           <ProjectComponent
             title="TagproCentral.com"
@@ -37,6 +40,7 @@ export default function Projects() {
             img={tagprocentral}
             liveurl="http://tagprocentral.com"
             github="https://github.com/itsokthen/tagpro_central"
+            isDarkMode={isDarkMode}
           />
           <ProjectComponent
             title="Ecommerce Platform"
@@ -47,6 +51,7 @@ export default function Projects() {
             img={tagprocentral}
             liveurl="http://tagprocentral.com"
             github="https://github.com/itsokthen/tagpro_central"
+            isDarkMode={isDarkMode}
           />
           <ProjectComponent
             title="GitHub Support Bot"
@@ -57,9 +62,13 @@ export default function Projects() {
             img={tagprocentral}
             liveurl="https://github.com/apps/probot-data-collection "
             github="https://github.com/Senior-Design-Team-19-Github-Bots"
+            isDarkMode={isDarkMode}
           />
         </div>
       </div>
     </>
   );
 }
+Projects.propTypes = {
+  isDarkMode: PropTypes.bool.isRequired,
+};

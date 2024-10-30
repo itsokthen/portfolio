@@ -6,7 +6,7 @@ export default function ContactMe() {
         <ul className="contactLinks">
           <li>
             <a href="https://github.com/itsokthen/" target="_blank">
-              <img src="github.png" alt="Github" />
+              <img src="github.svg" alt="Github" />
             </a>
           </li>
           <li>

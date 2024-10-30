@@ -1,10 +1,12 @@
 import { Link } from "react-scroll";
-import avatar from "/avatar.jpg";
+import avatar from "/newAvatar.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
+import styles from "../Intro.module.css";
+import PropTypes from "prop-types";
 
-export default function Intro() {
+export default function Intro({ isDarkMode }) {
   const arrowAnim = {
     y: [0, -10, 0],
     transition: {
@@ -32,9 +34,15 @@ export default function Intro() {
 
   return (
     <>
-      <div className="intro-container wrapper" id="Intro">
-        <div className="intro-text">
-          <h1 className="headerText">Hi! I&apos;m Cade 🙋‍♂️</h1>
+      <div className={`${styles["intro-container"]} wrapper`} id="Intro">
+        <div className={`${styles["intro-text"]} `}>
+          <h1
+            className={`${styles["headerText"]} ${
+              isDarkMode ? styles["dark"] : ""
+            }`}
+          >
+            Hi! I&apos;m Cade 🙋‍♂️
+          </h1>
           <motion.div variants={container} initial="hidden" animate="show">
             <motion.p variants={container}>
               I am a software engineer with a passion for concrete code with
@@ -49,9 +57,9 @@ export default function Intro() {
           </motion.div>
         </div>
 
-        <img src={avatar} alt="avatar" className="intro-photo" />
+        <img src={avatar} alt="avatar" className={`${styles["intro-photo"]}`} />
       </div>
-      <div className="down-arrow">
+      <div className={`${styles["down-arrow"]}`}>
         <Link to="Toolkit" smooth={true} duration={500}>
           <motion.div animate={arrowAnim}>
             <FontAwesomeIcon icon={faAngleDown} />
@@ -61,3 +69,6 @@ export default function Intro() {
     </>
   );
 }
+Intro.propTypes = {
+  isDarkMode: PropTypes.bool.isRequired,
+};

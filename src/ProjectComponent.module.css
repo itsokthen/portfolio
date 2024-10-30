@@ -14,9 +14,14 @@
   position: relative;
   box-sizing: border-box;
 }
+.projectComponent.dark {
+  background-color: var(--bg-color-dark);
+  border: 1px solid #313131;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+}
 
 .projectComponent.expanded {
-  max-height: 1000px;
+  max-height: 1500px;
 }
 
 .skill-image {
@@ -29,14 +34,16 @@
 .projectTitle {
   color: var(--main-color);
   font-weight: bold;
-  font-size: 1.8rem;
+  font-size: 2.6rem;
   margin: 10px 0;
 }
 
 .projectTags {
   color: #777;
-  font-size: 1rem;
+  font-size: 1.4rem;
   margin-bottom: 10px;
+  color: var(--secondary-color);
+  font-weight: "bold";
 }
 
 .projectLinks {
@@ -51,9 +58,13 @@
   background: rgba(255, 255, 255, 0.9);
   box-sizing: border-box;
 }
+.projectLinks.dark {
+  background: rgba(62, 62, 62, 0.9);
+}
 
 .projectTextContainer {
   margin-bottom: 60px;
+  font-size: 22px;
 }
 
 .buttons {
@@ -78,6 +89,10 @@
   transform-origin: center;
   transition: transform 0.3s;
   width: 100%;
+}
+
+.expandButton.dark {
+  color: white;
 }
 
 .expandButton.collapsed {

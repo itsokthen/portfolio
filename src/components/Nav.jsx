@@ -1,14 +1,24 @@
 import { Link } from "react-scroll";
 import styles from "../Nav.module.css";
+import { FaSun, FaMoon } from "react-icons/fa";
+import PropTypes from "prop-types";
 
-export default function Nav() {
+// Accept props for isDarkMode and toggleTheme
+export default function Nav({ toggleTheme, isDarkMode }) {
   return (
     <>
       <div className={styles["nav-buffer"]}></div>
       <div className={styles.nav}>
         <div className={styles.leftOfNav}></div>
         <div className={styles.navBackground}>
-          <div className={styles["dark-mode"]}>X</div>
+          {/* Toggle theme button */}
+          <div
+            className={styles["dark-mode"]}
+            onClick={toggleTheme}
+            style={{ cursor: "pointer" }}
+          >
+            {isDarkMode ? <FaSun /> : <FaMoon />}
+          </div>
           <ul className={styles.menu}>
             <Link to="Intro" smooth={true} duration={500}>
               ABOUT
@@ -25,3 +35,7 @@ export default function Nav() {
     </>
   );
 }
+Nav.propTypes = {
+  isDarkMode: PropTypes.bool.isRequired,
+  toggleTheme: PropTypes.func.isRequired,
+};

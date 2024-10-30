@@ -11,29 +11,55 @@ export default function ProjectComponent(props) {
     <div
       className={`${styles.projectComponent} ${
         isExpanded ? styles.expanded : ""
-      }`}
+      }
+      ${props.isDarkMode ? styles.dark : ""}`}
     >
       <img src={props.img} alt="project" className={styles["skill-image"]} />
       <h3 className={styles.projectTitle}>{props.title}</h3>
-      <p className={styles.projectTags}>{props.tags}</p>
+      <p
+        className={styles.projectTags}
+        style={{
+          color: "var(--secondary-color)",
+          fontWeight: "bold",
+        }}
+      >
+        {props.tags}
+      </p>
       <div className={styles.projectTextContainer}>
         <p>{props.description}</p>
         <p>
-          <strong>Contribution: </strong>
+          <strong
+            style={{
+              color: "var(--secondary-color)",
+            }}
+          >
+            Contribution:{" "}
+          </strong>
           {props.contribution}
         </p>
         <p>
-          <strong>What I learned: </strong>
+          <strong
+            style={{
+              color: "var(--secondary-color)",
+            }}
+          >
+            What I learned:{" "}
+          </strong>
           {props.learned}
         </p>
       </div>
-      <div className={styles.projectLinks}>
+      <div
+        className={`${styles.projectLinks} ${
+          props.isDarkMode ? styles.dark : ""
+        }`}
+      >
         <div className={styles.buttonContainer}>
           <button
             onClick={toggleExpand}
             className={`${styles.expandButton} ${
               isExpanded ? styles.expanded : styles.collapsed
-            }`}
+            }
+            ${props.isDarkMode ? styles.dark : ""}`}
           >
             {isExpanded ? "▲ Less" : "▼ More"}
           </button>
@@ -64,4 +90,5 @@ ProjectComponent.propTypes = {
   img: PropTypes.string.isRequired,
   liveurl: PropTypes.string,
   github: PropTypes.string,
+  isDarkMode: PropTypes.bool,
 };
