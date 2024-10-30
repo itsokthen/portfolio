@@ -7,22 +7,34 @@ import ContactMe from "./components/ContactMe";
 import "./App.css";
 
 function App() {
-  // Step 1: Initialize state for dark mode
   const [isDarkMode, setIsDarkMode] = useState(false);
 
-  // Step 2: Set the class on the body based on the theme
   useEffect(() => {
-    if (isDarkMode) {
-      document.body.classList.add("dark-mode");
-      document.body.classList.remove("light-mode");
+    const savedTheme = localStorage.getItem("isDarkMode");
+
+    if (savedTheme !== null) {
+      const isDark = JSON.parse(savedTheme);
+      setIsDarkMode(isDark);
+      document.documentElement.classList.toggle("dark-mode", isDark);
+      document.documentElement.classList.toggle("light-mode", !isDark);
     } else {
-      document.body.classList.add("light-mode");
-      document.body.classList.remove("dark-mode");
+      const prefersDark = window.matchMedia(
+        "(prefers-color-scheme: dark)"
+      ).matches;
+      setIsDarkMode(prefersDark);
+      document.documentElement.classList.toggle("dark-mode", prefersDark);
+      document.documentElement.classList.toggle("light-mode", !prefersDark);
     }
-  }, [isDarkMode]);
+  }, []);
 
   const toggleTheme = () => {
-    setIsDarkMode((prev) => !prev);
+    setIsDarkMode((prevMode) => {
+      const newMode = !prevMode;
+      localStorage.setItem("isDarkMode", JSON.stringify(newMode));
+      document.documentElement.classList.toggle("dark-mode", newMode);
+      document.documentElement.classList.toggle("light-mode", !newMode);
+      return newMode;
+    });
   };
 
   return (
