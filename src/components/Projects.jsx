@@ -45,7 +45,7 @@ export default function Projects({ isDarkMode }) {
             github="https://github.com/mtn/TPMatchmaking"
             isDarkMode={isDarkMode}
           />
-          <ProjectComponent
+          {/* <ProjectComponent
             title="Ecommerce Platform"
             tags="React | TypeScript | API | Supabase"
             description="An e-commerce platform integrated with Stripe for secure payment processing, providing users with a seamless experience to view and manage their orders."
@@ -55,7 +55,7 @@ export default function Projects({ isDarkMode }) {
             liveurl="http://tagprocentral.com"
             github="https://github.com/itsokthen/tagpro_central"
             isDarkMode={isDarkMode}
-          />
+          /> */}
           <ProjectComponent
             title="GitHub Support Bot"
             tags="Python | Git | Project Management"

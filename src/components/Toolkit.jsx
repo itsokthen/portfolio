@@ -18,6 +18,7 @@ import responsiveSVG from "/responsive.svg";
 import cSharpSVG from "/c-sharp-c.svg";
 import nextjsSVG from "/nextjs.svg";
 import aspnetSVG from "/programming-language-aspnet.svg";
+import tailwindSVG from "/tailwindcss-icon-svgrepo-com.svg";
 
 export default function Toolkit() {
   return (
@@ -42,6 +43,9 @@ export default function Toolkit() {
           </Reveal>
           <Reveal>
             <Skills text="ASP.NET" img={aspnetSVG} />
+          </Reveal>
+          <Reveal>
+            <Skills text="Tailwind CSS" img={tailwindSVG} />
           </Reveal>
           <Reveal>
             <Skills text="Github" img={githubSVG} />
