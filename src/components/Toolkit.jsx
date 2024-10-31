@@ -1,6 +1,5 @@
 import Skills from "./Skills.jsx";
 import { Reveal } from "./Reveal.tsx";
-import { motion, useInView, useAnimation } from "framer-motion";
 
 // SVG imports
 import ReactSVG from "/react-2.svg";
@@ -19,6 +18,7 @@ import cSharpSVG from "/c-sharp-c.svg";
 import nextjsSVG from "/nextjs.svg";
 import aspnetSVG from "/programming-language-aspnet.svg";
 import tailwindSVG from "/tailwindcss-icon-svgrepo-com.svg";
+import sqlSVG from "/sql-database-generic-svgrepo-com.svg";
 
 export default function Toolkit() {
   return (
@@ -46,6 +46,9 @@ export default function Toolkit() {
           </Reveal>
           <Reveal>
             <Skills text="Tailwind CSS" img={tailwindSVG} />
+          </Reveal>
+          <Reveal>
+            <Skills text="SQL" img={sqlSVG} />
           </Reveal>
           <Reveal>
             <Skills text="Github" img={githubSVG} />
