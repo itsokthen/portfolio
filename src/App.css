@@ -42,7 +42,8 @@ a {
 /* Medium screens (600px to 900px) */
 @media (min-width: 600px) and (max-width: 900px) {
   .wrapper {
-    max-width: 90%;
+    max-width: 95%;
+    margin: 0 30px;
   }
 }
 
@@ -171,7 +172,6 @@ a {
   gap: 20px;
   justify-items: center;
   align-items: start;
-  padding: 20px;
 }
 @media (max-width: 768px) {
   .projectCards {
