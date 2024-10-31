@@ -15,9 +15,13 @@ export default function ProjectComponent(props) {
         }
       ${props.isDarkMode ? styles.dark : ""}`}
       >
-        <img src={props.img} alt="project" className={styles["skill-image"]} />
+        <img
+          src={props.img}
+          alt={props.title}
+          className={styles["skill-image"]}
+        />
         <h3 className={styles.projectTitle}>{props.title}</h3>
-        <p
+        <h4
           className={styles.projectTags}
           style={{
             color: "var(--secondary-color)",
@@ -25,7 +29,7 @@ export default function ProjectComponent(props) {
           }}
         >
           {props.tags}
-        </p>
+        </h4>
         <div className={styles.projectTextContainer}>
           <p>{props.description}</p>
           <p>
