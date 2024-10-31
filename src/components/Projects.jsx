@@ -30,7 +30,7 @@ export default function Projects({ isDarkMode }) {
             contribution="I contributed to the ideation, design, and implementation of new features while assisting with debugging and performance optimization"
             learned="Working alongside a seasoned developer was a valuable learning experience. I gained insight into best practices for maintaining legacy code and balancing new feature development with system stability. This collaboration taught me how to absorb constructive feedback and refine my ideas to better align with the project vision"
             img={tpm}
-            liveurl="http://tagprocentral.com"
+            liveurl="https://tpm.gg"
             github="https://github.com/itsokthen/tagpro_central"
             isDarkMode={isDarkMode}
           />
@@ -41,7 +41,7 @@ export default function Projects({ isDarkMode }) {
             contribution="I designed and developed the website from the ground up using React, crafting a user-friendly interface for players and fans to access game statistics and league standings"
             learned="Developing TagproCentral from scratch deepened my understanding of front-end development, particularly in React. Managing this league and website independently taught me valuable skills in project ownership, from technical troubleshooting to handling user feedback"
             img={tagprocentral}
-            liveurl="https://tpm.gg/"
+            liveurl="http://tagprocentral.com"
             github="https://github.com/mtn/TPMatchmaking"
             isDarkMode={isDarkMode}
           />
