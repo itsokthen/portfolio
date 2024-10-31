@@ -8,76 +8,78 @@ export default function ProjectComponent(props) {
   const toggleExpand = () => setIsExpanded(!isExpanded);
 
   return (
-    <div
-      className={`${styles.projectComponent} ${
-        isExpanded ? styles.expanded : ""
-      }
-      ${props.isDarkMode ? styles.dark : ""}`}
-    >
-      <img src={props.img} alt="project" className={styles["skill-image"]} />
-      <h3 className={styles.projectTitle}>{props.title}</h3>
-      <p
-        className={styles.projectTags}
-        style={{
-          color: "var(--secondary-color)",
-          fontWeight: "bold",
-        }}
-      >
-        {props.tags}
-      </p>
-      <div className={styles.projectTextContainer}>
-        <p>{props.description}</p>
-        <p>
-          <strong
-            style={{
-              color: "var(--secondary-color)",
-            }}
-          >
-            Contribution:{" "}
-          </strong>
-          {props.contribution}
-        </p>
-        <p>
-          <strong
-            style={{
-              color: "var(--secondary-color)",
-            }}
-          >
-            What I learned:{" "}
-          </strong>
-          {props.learned}
-        </p>
-      </div>
+    <section>
       <div
-        className={`${styles.projectLinks} ${
-          props.isDarkMode ? styles.dark : ""
-        }`}
+        className={`${styles.projectComponent} ${
+          isExpanded ? styles.expanded : ""
+        }
+      ${props.isDarkMode ? styles.dark : ""}`}
       >
-        <div className={styles.buttonContainer}>
-          <button
-            onClick={toggleExpand}
-            className={`${styles.expandButton} ${
-              isExpanded ? styles.expanded : styles.collapsed
-            }
-            ${props.isDarkMode ? styles.dark : ""}`}
-          >
-            {isExpanded ? "▲ Less" : "▼ More"}
-          </button>
+        <img src={props.img} alt="project" className={styles["skill-image"]} />
+        <h3 className={styles.projectTitle}>{props.title}</h3>
+        <p
+          className={styles.projectTags}
+          style={{
+            color: "var(--secondary-color)",
+            fontWeight: "bold",
+          }}
+        >
+          {props.tags}
+        </p>
+        <div className={styles.projectTextContainer}>
+          <p>{props.description}</p>
+          <p>
+            <strong
+              style={{
+                color: "var(--secondary-color)",
+              }}
+            >
+              Contribution:{" "}
+            </strong>
+            {props.contribution}
+          </p>
+          <p>
+            <strong
+              style={{
+                color: "var(--secondary-color)",
+              }}
+            >
+              What I learned:{" "}
+            </strong>
+            {props.learned}
+          </p>
         </div>
-        <div className={styles.buttons}>
-          {props.liveurl && (
-            <a href={props.liveurl} target="_blank" rel="noopener noreferrer">
-              <button className="button">Live</button>
-            </a>
-          )}
-          {props.github && (
-            <a href={props.github} target="_blank" rel="noopener noreferrer">
-              <button className="button">GitHub</button>
-            </a>
-          )}
+        <div
+          className={`${styles.projectLinks} ${
+            props.isDarkMode ? styles.dark : ""
+          }`}
+        >
+          <div className={styles.buttonContainer}>
+            <button
+              onClick={toggleExpand}
+              className={`${styles.expandButton} ${
+                isExpanded ? styles.expanded : styles.collapsed
+              }
+            ${props.isDarkMode ? styles.dark : ""}`}
+            >
+              {isExpanded ? "▲ Less" : "▼ More"}
+            </button>
+          </div>
+          <div className={styles.buttons}>
+            {props.liveurl && (
+              <a href={props.liveurl} target="_blank" rel="noopener noreferrer">
+                <button className="button">Live</button>
+              </a>
+            )}
+            {props.github && (
+              <a href={props.github} target="_blank" rel="noopener noreferrer">
+                <button className="button">GitHub</button>
+              </a>
+            )}
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

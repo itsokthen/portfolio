@@ -33,7 +33,7 @@ export default function Intro({ isDarkMode }) {
   };
 
   return (
-    <>
+    <main>
       <div className={`${styles["intro-container"]} wrapper`} id="Intro">
         <div className={`${styles["intro-text"]} `}>
           <h1
@@ -66,7 +66,7 @@ export default function Intro({ isDarkMode }) {
           </motion.div>
         </Link>
       </div>
-    </>
+    </main>
   );
 }
 Intro.propTypes = {

@@ -22,7 +22,7 @@ import sqlSVG from "/sql-database-generic-svgrepo-com.svg";
 
 export default function Toolkit() {
   return (
-    <>
+    <seciton>
       <div className="toolkit wrapper" id="Toolkit">
         <h2 className="title">My Toolkit 🎯</h2>
         <div className="skills">
@@ -76,6 +76,6 @@ export default function Toolkit() {
           </Reveal>
         </div>
       </div>
-    </>
+    </seciton>
   );
 }

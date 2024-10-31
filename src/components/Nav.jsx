@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 // Accept props for isDarkMode and toggleTheme
 export default function Nav({ toggleTheme, isDarkMode }) {
   return (
-    <>
+    <nav>
       <div className={styles["nav-buffer"]}></div>
       <div className={styles.nav}>
         <div className={styles.leftOfNav}></div>
@@ -20,19 +20,25 @@ export default function Nav({ toggleTheme, isDarkMode }) {
             {isDarkMode ? <FaSun /> : <FaMoon />}
           </div>
           <ul className={styles.menu}>
-            <Link to="Intro" smooth={true} duration={500}>
-              ABOUT
-            </Link>
-            <Link to="Projects" smooth={true} duration={500}>
-              PROJECTS
-            </Link>
-            <Link to="Contact" smooth={true} duration={500}>
-              CONTACT
-            </Link>
+            <li>
+              <Link to="Intro" smooth={true} duration={500}>
+                ABOUT
+              </Link>
+            </li>
+            <li>
+              <Link to="Projects" smooth={true} duration={500}>
+                PROJECTS
+              </Link>
+            </li>
+            <li>
+              <Link to="Contact" smooth={true} duration={500}>
+                CONTACT
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
-    </>
+    </nav>
   );
 }
 Nav.propTypes = {

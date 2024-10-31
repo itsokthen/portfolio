@@ -43,7 +43,7 @@
   }
 }
 .headerText {
-  color: var(--main-color);
+  color: black;
   position: relative;
   width: 50%;
   opacity: 0;
@@ -51,7 +51,7 @@
 }
 
 .headerText.dark {
-  color: var(--main-alt);
+  color: white;
 }
 
 .headerText::after {
